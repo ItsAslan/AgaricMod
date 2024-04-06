@@ -1,5 +1,6 @@
 package itsaslan.agaric.main;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -7,6 +8,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import itsaslan.agaric.lib.ModVars;
 import itsaslan.agaric.proxy.CommonProxy;
+import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid = ModVars.MOD_ID, name = ModVars.MOD_NAME, version = ModVars.MOD_VERSION)
 public class MainRegistry
@@ -21,6 +23,10 @@ public class MainRegistry
     public void preInit(FMLPreInitializationEvent $e)
     {
         proxy.preInit($e);
+
+        ModEventHandler handler = new ModEventHandler();
+        FMLCommonHandler.instance().bus().register(handler);
+        MinecraftForge.EVENT_BUS.register(handler);
     }
 
     @Mod.EventHandler

@@ -1,4 +1,4 @@
-package itsaslan.agaric.blocks;
+package itsaslan.agaric.blocks.generic;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -6,7 +6,7 @@ import net.minecraft.block.material.Material;
 public class BlockGeneric extends Block
 {
 
-    protected BlockGeneric(Material material) {
+    public BlockGeneric(Material material) {
         super(material);
     }
 

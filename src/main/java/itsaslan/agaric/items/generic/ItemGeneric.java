@@ -1,4 +1,4 @@
-package itsaslan.agaric.items;
+package itsaslan.agaric.items.generic;
 
 import net.minecraft.item.Item;
 

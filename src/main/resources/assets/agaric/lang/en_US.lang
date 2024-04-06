@@ -1,0 +1,10 @@
+item.whiteFungi.name=Niveous Fungi
+item.brownFungi.name=Fuscus Fungi
+item.redFungi.name=Rubrum Fungi
+item.itemKnife.name=Cutting Knife
+
+tile.whiteFungiBlock.name=Niveous Fungi Block
+tile.brownFungiBlock.name=Fuscus Fungi Block
+tile.redFungiBlock.name=Rubrum Fungi Block
+tile.whiteFungiStem.name=Niveous Fungi Stem
+tile.whiteFungiRoof.name=Niveous Fungi Roof
