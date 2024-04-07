@@ -1,6 +1,7 @@
 package itsaslan.agaric.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import itsaslan.agaric.blocks.fungi.RedFungiBlock;
 import itsaslan.agaric.blocks.fungi.WhiteFungiBlock;
 import itsaslan.agaric.blocks.fungi.WhiteFungiRoof;
 import itsaslan.agaric.blocks.fungi.WhiteFungiStem;
@@ -32,8 +33,8 @@ public class ModBlocks
         whiteFungiBlock = new WhiteFungiBlock(Material.rock).setBlockName("whiteFungiBlock").setCreativeTab(CreativeTabs.tabBlock).setStepSound(soundTypeCloth).setBlockTextureName(ModVars.MOD_ID + ":whiteFungiRoof");
         whiteFungiRoof = new WhiteFungiRoof(Material.cloth).setBlockName("whiteFungiRoof").setCreativeTab(CreativeTabs.tabBlock).setStepSound(soundTypeCloth).setBlockTextureName(ModVars.MOD_ID + ":whiteFungiRoof");
         whiteFungiStem = new WhiteFungiStem(Material.cloth).setBlockName("whiteFungiStem").setCreativeTab(CreativeTabs.tabBlock).setStepSound(soundTypeCloth);
-        brownFungiBlock = new BlockGeneric(Material.rock).setBlockName("brownFungiBlock").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName(ModVars.MOD_ID + ":brownFungiBlock");
-        redFungiBlock = new BlockGeneric(Material.rock).setBlockName("redFungiBlock").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName(ModVars.MOD_ID + ":redFungiBlock");
+        brownFungiBlock = new BlockGeneric(Material.rock).setBlockName("brownFungiBlock").setCreativeTab(CreativeTabs.tabBlock).setStepSound(soundTypeCloth).setBlockTextureName(ModVars.MOD_ID + "brownFungiBlock");
+        redFungiBlock = new RedFungiBlock(Material.rock).setBlockName("redFungiBlock").setCreativeTab(CreativeTabs.tabBlock).setStepSound(soundTypeCloth).setBlockTextureName(ModVars.MOD_ID + "models/redFungiBlock");
     }
 
     public static void BlockRegister()

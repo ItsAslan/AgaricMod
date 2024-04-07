@@ -4,6 +4,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import itsaslan.agaric.blocks.ModBlocks;
+import itsaslan.agaric.crafting.RegisterCrafting;
 import itsaslan.agaric.items.ModItems;
 import itsaslan.agaric.main.RegisterTileEntity;
 
@@ -14,6 +15,7 @@ public class CommonProxy
         ModItems.MainRegistry();
         ModBlocks.MainRegistry();
         RegisterTileEntity.MainRegistry();
+        RegisterCrafting.MainRegistry();
     }
 
     public void init(FMLInitializationEvent $e)

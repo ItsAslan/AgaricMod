@@ -1,37 +1,42 @@
 package itsaslan.agaric.blocks.fungi;
 
-import itsaslan.agaric.blocks.ModBlocks;
 import itsaslan.agaric.interfaces.IKnifeHarvestable;
 import itsaslan.agaric.items.ModItems;
+import itsaslan.agaric.tileentity.fungi.TileEntityRedFungi;
 import itsaslan.agaric.tileentity.fungi.TileEntityWhiteFungi;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
+
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class WhiteFungiBlock extends BlockContainer implements IKnifeHarvestable {
-
-    public WhiteFungiBlock(Material material) {
+public class RedFungiBlock extends BlockContainer implements IKnifeHarvestable
+{
+    public RedFungiBlock(Material material) {
         super(material);
         this.setHardness(50.0f);
     }
 
     @Override
-    public boolean renderAsNormalBlock() {
+    public boolean renderAsNormalBlock()
+    {
         return false;
     }
 
     @Override
-    public int getRenderType() {
+    public int getRenderType()
+    {
         return -1;
     }
 
     @Override
-    public boolean isOpaqueCube() {
+    public boolean isOpaqueCube()
+    {
         return false;
     }
 
@@ -46,14 +51,15 @@ public class WhiteFungiBlock extends BlockContainer implements IKnifeHarvestable
 
     @Override
     public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
-        return new TileEntityWhiteFungi();
+        return new TileEntityRedFungi();
     }
 
     @Override
     public void onHarvested(World world, int x, int y, int z, Block block) {
-        if (!world.isRemote) {
+        if(!world.isRemote)
+        {
             world.setBlock(x, y, z, block);
-            this.dropBlockAsItem(world, x, y, z, new ItemStack(ModItems.whiteFungi, 2));
+            this.dropBlockAsItem(world, x, y, z, new ItemStack(ModItems.redFungi, 2));
             world.playSoundEffect(x + 0.5, y + 0.5, z + 0.5, "mob.sheep.shear", 1.0F, 1.0F);
         }
     }
