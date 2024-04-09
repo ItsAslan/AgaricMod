@@ -1,9 +1,9 @@
 package itsaslan.agaric.tileentity.fungi;
 
-import itsaslan.agaric.interfaces.OrientationHandler;
+import itsaslan.agaric.interfaces.IOrientationHandler;
 import net.minecraft.tileentity.TileEntity;
 
-public class TileEntityWhiteFungi extends TileEntity implements OrientationHandler
+public class TileEntityWhiteFungi extends TileEntity implements IOrientationHandler
 {
 
     private int orientation = 0;

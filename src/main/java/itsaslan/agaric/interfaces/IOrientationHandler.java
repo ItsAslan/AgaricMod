@@ -1,6 +1,6 @@
 package itsaslan.agaric.interfaces;
 
-public interface OrientationHandler
+public interface IOrientationHandler
 {
 
     int getOrientation();
