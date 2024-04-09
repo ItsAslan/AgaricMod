@@ -66,7 +66,7 @@ public class RedFungiBlock extends BlockContainer implements IKnifeHarvestable
         {
             world.setBlock(x, y, z, block);
             this.dropBlockAsItem(world, x, y, z, new ItemStack(ModItems.redFungi, 2));
-            world.playSoundEffect(x + 0.5, y + 0.5, z + 0.5, "mob.sheep.shear", 1.0F, 1.0F);
+            world.playSoundEffect(x + 0.5, y + 0.5, z + 0.5, "mod.sheep.shear", 1.0F, 1.0F);
         }
     }
 
